@@ -23,7 +23,11 @@ const scrapeRankings = async (region, event, gender, type) => {
         const id = $(children[0]).children().first().children().first().children().first().attr('data-id')
         const name = $(children[0]).children().first().children().first().children().first().attr('data-name')
 
-        const rank = $(children[1]).text()
+        //const rank = $(children[1]).text()
+
+        //So that people with the same result have a rank, instead of empty on the website
+
+        const rank = i + 1
 
         const person_link = `https://www.worldcubeassociation.org/persons${$(children[2]).children().first().attr('href')}?lang=en`
 
