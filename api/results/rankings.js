@@ -46,18 +46,14 @@ const rankings = async (req, res) => {
         }
     }
 
-    /*try {
+    try {
         const rankings = await scrapeRankings(region.split(' ').join('+'), events[event], gender, type)
         console.log(rankings)
         res.status(200).json(rankings);
     }
     catch (error) {
         res.status(500).json({message: error})
-    }*/
-
-    const rankings = await scrapeRankings(region.split(' ').join('+'), events[event], gender, type)
-    console.log(rankings)
-    res.status(200).json(rankings);
+    }
 }
 
 export default rankings

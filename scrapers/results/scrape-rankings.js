@@ -3,7 +3,7 @@ import cheerio from 'cheerio'
 
 const scrapeRankings = async (region, event, gender, type) => {
 
-    const path = `https://www.worldcubeassociation.org/results/rankings/${event}/${type}?region=${region}&gender=${gender}&lang=en`
+    const path = `https://cubing.com/results/rankings?event=${event}&type=${type}region=${region}&gender=${gender}&lang=en`
 
     console.log(path)
 
