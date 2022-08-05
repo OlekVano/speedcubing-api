@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { regions, events, genders, types } from '../../consts.js'
+import { regions, events, genders, types } from '../consts.js'
 
-import scrapeRankings from '../../scrapers/results/scrape-rankings.js'
+import scrapeRankings from '../scrapers/scrape-rankings.js'
 
 const rankings = async (req, res) => {
     var region = 'World'

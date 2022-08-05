@@ -1,10 +1,10 @@
 import express from 'express'
 
-import rankings from './results/rankings.js'
+import rankings from './rankings.js'
 
 const app = new express()
 
-app.get('/results/rankings', rankings)
+app.get('/rankings', rankings)
 
 app.listen(3000, () => {
     console.log('Listening')
