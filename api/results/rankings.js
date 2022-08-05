@@ -48,11 +48,16 @@ const rankings = async (req, res) => {
 
     try {
         const rankings = await scrapeRankings(region.split(' ').join('+'), events[event], gender, type)
-        console.log(rankings)
+        if (rankings === null) {
+            res.status(404).send()
+            return
+        }
         res.status(200).json(rankings);
+        return
     }
     catch (error) {
         res.status(500).json({message: error})
+        return
     }
 }
 

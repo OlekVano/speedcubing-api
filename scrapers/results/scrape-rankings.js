@@ -5,10 +5,11 @@ const scrapeRankings = async (region, event, gender, type) => {
 
     const path = `https://cubing.com/results/rankings?event=${event}&type=${type}region=${region}&gender=${gender}&lang=en`
 
-    console.log(path)
-
     const res = await axios.get(path)
-    console.log(`statusCode: ${res.status}`);
+    
+    if (res.status != 404) {
+        return null
+    }
 
     const html = res.data
     const $ = cheerio.load(html)
