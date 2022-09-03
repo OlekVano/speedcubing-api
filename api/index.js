@@ -1,6 +1,6 @@
 import express from 'express'
 
-import rankings from './rankings.js'
+import rankings from './routes/rankings.js'
 
 const app = new express()
 

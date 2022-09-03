@@ -176,9 +176,9 @@ export const events = {
 }
 
 export const genders = [
-    'All',
-    'Male',
-    'Female',
+    'all',
+    'male',
+    'female',
 ]
 
 export const types = [
